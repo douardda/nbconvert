@@ -1,0 +1,71 @@
+Source: nbconvert
+Maintainer: Julien Puydt <julien.puydt@laposte.net>
+Section: python
+Priority: optional
+Standards-Version: 3.9.6
+Homepage: https://github.com/jupyter/nbconvert
+Build-Depends: debhelper (>= 9),
+               dh-python,
+               inkscape,
+               pandoc,
+               python,
+               python-ipykernel,
+               python-jinja2,
+               python-jupyter-core,
+               python-mistune,
+               python-nbformat,
+               python-nose,
+               python-path,
+               python-pickleshare,
+               python-pygments,
+               python-setuptools,
+               python-sphinx,
+               python-traitlets,
+               python3-all,
+               python3-ipykernel,
+               python3-jinja2,
+               python3-jupyter-core,
+               python3-mistune,
+               python3-nbformat,
+               python3-nose,
+               python3-path,
+               python3-pickleshare,
+               python3-pygments,
+               python3-setuptools,
+               python3-traitlets,
+               texlive-fonts-recommended,
+               texlive-generic-recommended,
+               texlive-latex-base,
+               texlive-latex-extra
+X-Python-Version: >= 2.7
+X-Python3-Version: >= 3.2
+Vcs-Git: git://anonscm.debian.org/python-modules/packages/nbconvert.git
+Vcs-Browser: https://anonscm.debian.org/cgit/python-modules/packages/nbconvert.git
+
+Package: python-nbconvert
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}
+Description: Jupyter notebook conversion (Python 2)
+ Jupyter nbconvert converts notebooks to various other formats
+ using Jinja templates.
+ .
+ This package installs the library for Python 2.
+
+Package: python3-nbconvert
+Architecture: all
+Depends: ${misc:Depends}, ${python3:Depends}
+Description: Jupyter notebook conversion (Python 3)
+ Jupyter nbconvert converts notebooks to various other formats
+ using Jinja templates.
+ .
+ This package installs the library for Python 3.
+
+Package: python-nbconvert-doc
+Section: doc
+Architecture: all
+Depends: ${misc:Depends}, ${sphinxdoc:Depends}
+Description: Jupyter notebook conversion (documentation)
+ Jupyter nbconvert converts notebooks to various other formats
+ using Jinja templates.
+ .
+ This package installs the documentation.

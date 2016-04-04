@@ -1,0 +1,24 @@
+From 7ffa289e331ce0a46f10b2a58415a599969b0743 Mon Sep 17 00:00:00 2001
+From: Julien Puydt <julien.puydt@laposte.net>
+Date: Mon, 5 Oct 2015 20:59:38 +0200
+Subject: Use setuptools for all targets so python*:Depends substitutions work
+
+Forwarded: no
+---
+ setup.py | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+diff --git a/setup.py b/setup.py
+index f30e1e1..3b25ded 100644
+--- a/setup.py
++++ b/setup.py
+@@ -166,8 +166,7 @@ setup_args = dict(
+     ],
+ )
+ 
+-if 'develop' in sys.argv or any(a.startswith('bdist') for a in sys.argv):
+-    import setuptools
++import setuptools
+ 
+ setuptools_args = {}
+ install_requires = setuptools_args['install_requires'] = [

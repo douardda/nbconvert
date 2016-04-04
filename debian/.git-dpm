@@ -1,0 +1,11 @@
+# see git-dpm(1) from git-dpm package
+7ffa289e331ce0a46f10b2a58415a599969b0743
+7ffa289e331ce0a46f10b2a58415a599969b0743
+220993ac615d1200116483a97f576745e99a30b4
+220993ac615d1200116483a97f576745e99a30b4
+nbconvert_4.0.0.orig.tar.gz
+7b149cb25a1122763c47c5ae8327ea2ce3cea5bc
+260424
+debianTag="debian/%e%v"
+patchedTag="patched/%e%v"
+upstreamTag="upstream/%e%u"

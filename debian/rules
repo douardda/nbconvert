@@ -1,0 +1,21 @@
+#!/usr/bin/make -f
+
+#export DH_VERBOSE=1
+export LC_ALL=C.UTF-8
+export PYBUILD_NAME=nbconvert
+export PYBUILD_TEST_ARGS=-v
+
+%:
+	dh $@ --with python2,python3,sphinxdoc --buildsystem=pybuild
+
+override_dh_auto_install:
+	dh_auto_install
+	rm -r `find debian/python-nbconvert -name tests -type d`
+	rm -r debian/python3-nbconvert/usr/bin
+	rm -r `find debian/python3-nbconvert -name tests -type d`
+
+override_dh_sphinxdoc:
+ifeq (,$(findstring nodocs, $(DEB_BUILD_OPTIONS)))
+	PYTHONPATH=. sphinx-build -b html docs/source debian/python-nbconvert-doc/usr/share/doc/python-nbconvert-doc/html
+	dh_sphinxdoc -O--buildsystem=pybuild
+endif

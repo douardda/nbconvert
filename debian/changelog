@@ -1,0 +1,5 @@
+nbconvert (4.1.0-1) UNRELEASED; urgency=medium
+
+  * Initial release. (Closes: #801058)
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Tue, 19 Jan 2016 21:25:59 +0100
